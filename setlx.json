@@ -1,0 +1,27 @@
+{
+  "homepage": "https://randoom.org/Software/SetlX",
+  "description": "setlX is an interpreter for the high level programming-language SetlX (set language extended)",
+  "version": "2.7.0",
+  "license": "BSD-3-Clause",
+  "url": "http://download.randoom.org/setlX/pc/setlX_v2-7-0.binary_only.zip",
+  "hash": "876c8aad46fc8c08e71d55fc0e6b9a46d753f16ea9655d1beae76d170b1f2de3",
+  "bin": "setlX.cmd",
+  "suggest": {
+    "JDK": [
+      "java/oraclejdk",
+      "java/openjdk"
+    ]
+  },
+  "pre_install": [
+    "$c = Get-Content $dir\\setlX.cmd",
+    "$c = $c.replace('set setlXJarDirectory=.', 'set setlXJarDirectory=' + $dir)",
+    "$c = $c.replace('set SETLX_LIBRARY_PATH=%HOMEDRIVE%%HOMEPATH%\\setlXlibrary\\', 'set SETLX_LIBRARY_PATH=' + $dir + '\\setlXlibrary\\')",
+    "[IO.File]::WriteAllLines('' + $dir + '\\setlX.cmd', $c)"
+  ],
+  "checkver": {
+    "github": "https://github.com/herrmanntom/setlX"
+  },
+  "autoupdate": {
+    "url": "http://download.randoom.org/setlX/pc/setlX_v$dashVersion.binary_only.zip"
+  }
+}
