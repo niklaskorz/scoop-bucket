@@ -1,7 +1,7 @@
 {
   "homepage": "https://gravitational.com/teleport/",
   "description": "Privileged access management for elastic infrastructure",
-  "version": "v3.1.1",
+  "version": "3.1.1",
   "license": "Apache-2.0",
   "url": "https://get.gravitational.com/teleport-v3.1.1-windows-amd64-bin.zip",
   "hash": "97da6c16bd18a587625c8cefe174b3218dfee2cc1f0bc32a3ac5772be9a3d585",
@@ -11,6 +11,6 @@
     "github": "https://github.com/gravitational/teleport"
   },
   "autoupdate": {
-    "url": "https://get.gravitational.com/teleport-$version-windows-amd64-bin.zip"
+    "url": "https://get.gravitational.com/teleport-v$version-windows-amd64-bin.zip"
   }
 }
